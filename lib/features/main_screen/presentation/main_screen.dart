@@ -90,13 +90,10 @@ class _MainScreenState extends State<MainScreen> {
                                   ? null
                                   : _login,
                           child: state.status == SendingDataEnum.inProcess
-                              ? SizedBox(
+                              ? const SizedBox(
                                   height: 20,
                                   width: 20,
-                                  child: CircularProgressIndicator(
-                                    color:
-                                        Theme.of(context).colorScheme.onPrimary,
-                                  ),
+                                  child: CircularProgressIndicator.adaptive(),
                                 )
                               : Text(
                                   'Send',
